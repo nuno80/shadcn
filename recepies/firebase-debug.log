@@ -1,0 +1,175 @@
+[debug] [2024-09-22T09:52:18.448Z] ----------------------------------------------------------------------
+[debug] [2024-09-22T09:52:18.452Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nuno8\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-09-22T09:52:18.452Z] CLI Version:   13.18.0
+[debug] [2024-09-22T09:52:18.453Z] Platform:      win32
+[debug] [2024-09-22T09:52:18.453Z] Node Version:  v20.17.0
+[debug] [2024-09-22T09:52:18.453Z] Time:          Sun Sep 22 2024 11:52:18 GMT+0200 (Ora legale dell’Europa centrale)
+[debug] [2024-09-22T09:52:18.453Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-22T09:52:18.462Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-22T09:52:18.463Z] > authorizing via signed-in user (nuno.80.al@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\nuno8\Desktop\programmazione\shadcn\recepies
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-09-22T09:53:43.233Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-09-22T09:53:43.863Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-09-22T09:53:43.863Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project recepies-dce96 (recepies) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-09-22T09:53:51.222Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-09-22T09:53:51.222Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/recepies-dce96
+[debug] [2024-09-22T09:53:52.431Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firebasedatabase.googleapis.com 200
+[debug] [2024-09-22T09:53:52.431Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firebasedatabase.googleapis.com [omitted]
+[warn] !  database: missing required API firebasedatabase.googleapis.com. Enabling now... 
+[debug] [2024-09-22T09:53:52.433Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firebasedatabase.googleapis.com:enable [none]
+[debug] [2024-09-22T09:53:52.433Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firebasedatabase.googleapis.com:enable x-goog-quota-user=projects/recepies-dce96
+[debug] [2024-09-22T09:53:53.581Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firebasedatabase.googleapis.com:enable 200
+[debug] [2024-09-22T09:53:53.581Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firebasedatabase.googleapis.com:enable [omitted]
+[debug] [2024-09-22T09:54:03.588Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-09-22T09:54:03.589Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/recepies-dce96
+[debug] [2024-09-22T09:54:04.609Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firebasedatabase.googleapis.com 200
+[debug] [2024-09-22T09:54:04.609Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-09-22T09:54:04.617Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/recepies-dce96 [none]
+[debug] [2024-09-22T09:54:04.897Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/recepies-dce96 200
+[debug] [2024-09-22T09:54:04.898Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/recepies-dce96 {"projectId":"recepies-dce96","projectNumber":"745725218335","displayName":"recepies","name":"projects/recepies-dce96","resources":{"hostingSite":"recepies-dce96"},"state":"ACTIVE","etag":"1_5ca49c34-5c5c-4367-b004-d4fb773ee5a7"}
+[debug] [2024-09-22T09:55:16.520Z] >>> [apiv2][query] POST https://firebasedatabase.googleapis.com/v1beta/projects/recepies-dce96/locations/europe-west1/instances databaseId=recepies-dce96-default-rtdb&validateOnly=true
+[debug] [2024-09-22T09:55:16.521Z] >>> [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/recepies-dce96/locations/europe-west1/instances {"type":"default_database"}
+[debug] [2024-09-22T09:55:17.574Z] <<< [apiv2][status] POST https://firebasedatabase.googleapis.com/v1beta/projects/recepies-dce96/locations/europe-west1/instances 200
+[debug] [2024-09-22T09:55:17.575Z] <<< [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/recepies-dce96/locations/europe-west1/instances {"name":"projects/745725218335/locations/europe-west1/instances/recepies-dce96-default-rtdb","project":"projects/745725218335","databaseUrl":"https://recepies-dce96-default-rtdb.europe-west1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2024-09-22T09:55:17.579Z] >>> [apiv2][query] POST https://firebasedatabase.googleapis.com/v1beta/projects/recepies-dce96/locations/europe-west1/instances databaseId=recepies-dce96-default-rtdb
+[debug] [2024-09-22T09:55:17.579Z] >>> [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/recepies-dce96/locations/europe-west1/instances {"type":"default_database"}
+[debug] [2024-09-22T09:55:18.084Z] <<< [apiv2][status] POST https://firebasedatabase.googleapis.com/v1beta/projects/recepies-dce96/locations/europe-west1/instances 200
+[debug] [2024-09-22T09:55:18.085Z] <<< [apiv2][body] POST https://firebasedatabase.googleapis.com/v1beta/projects/recepies-dce96/locations/europe-west1/instances {"name":"projects/745725218335/locations/europe-west1/instances/recepies-dce96-default-rtdb","project":"projects/745725218335","databaseUrl":"https://recepies-dce96-default-rtdb.europe-west1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-09-22T09:55:36.853Z] >>> [apiv2][query] GET https://recepies-dce96-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json [none]
+[debug] [2024-09-22T09:55:38.014Z] <<< [apiv2][status] GET https://recepies-dce96-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2024-09-22T09:55:38.014Z] <<< [apiv2][body] GET https://recepies-dce96-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json [stream]
+[info] +  Database Rules for recepies-dce96-default-rtdb have been written to y. 
+[info] Future modifications to y will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2024-09-22T09:55:38.029Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firestore.googleapis.com [none]
+[debug] [2024-09-22T09:55:38.029Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firestore.googleapis.com x-goog-quota-user=projects/recepies-dce96
+[debug] [2024-09-22T09:55:39.556Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firestore.googleapis.com 200
+[debug] [2024-09-22T09:55:39.556Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/firestore.googleapis.com [omitted]
+[debug] [2024-09-22T09:55:39.558Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/recepies-dce96/databases/(default) [none]
+[debug] [2024-09-22T09:55:39.942Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/recepies-dce96/databases/(default) 200
+[debug] [2024-09-22T09:55:39.943Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/recepies-dce96/databases/(default) {"name":"projects/recepies-dce96/databases/(default)","uid":"8cdd70e4-2db5-4323-95e4-7ede371e4e97","createTime":"2024-09-22T09:44:06.754247Z","updateTime":"2024-09-22T09:44:06.754247Z","locationId":"europe-west2","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-09-22T09:44:06.754247Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"g","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IKnw67Kk1ogDMMePmuih1ogD"}
+[debug] [2024-09-22T09:55:39.943Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-09-22T09:55:39.943Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-09-22T09:55:39.944Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-22T09:55:39.945Z] > authorizing via signed-in user (nuno.80.al@gmail.com)
+[debug] [2024-09-22T09:55:39.945Z] [iam] checking project recepies-dce96 for permissions ["firebase.projects.get"]
+[debug] [2024-09-22T09:55:39.947Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/recepies-dce96:testIamPermissions [none]
+[debug] [2024-09-22T09:55:39.947Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/recepies-dce96:testIamPermissions x-goog-quota-user=projects/recepies-dce96
+[debug] [2024-09-22T09:55:39.947Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/recepies-dce96:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-09-22T09:55:40.741Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/recepies-dce96:testIamPermissions 200
+[debug] [2024-09-22T09:55:40.741Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/recepies-dce96:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-09-22T09:55:51.967Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/recepies-dce96/releases pageSize=10&pageToken=
+[debug] [2024-09-22T09:55:52.790Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/recepies-dce96/releases 200
+[debug] [2024-09-22T09:55:52.790Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/recepies-dce96/releases {"releases":[{"name":"projects/recepies-dce96/releases/cloud.firestore","rulesetName":"projects/recepies-dce96/rulesets/75c8c4f6-a044-4441-88cd-d1ce7afe3f76","createTime":"2024-09-22T09:44:13.025975Z","updateTime":"2024-09-22T09:44:13.025975Z"}]}
+[debug] [2024-09-22T09:55:52.791Z] Found ruleset: projects/recepies-dce96/rulesets/75c8c4f6-a044-4441-88cd-d1ce7afe3f76
+[debug] [2024-09-22T09:55:52.791Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/recepies-dce96/rulesets/75c8c4f6-a044-4441-88cd-d1ce7afe3f76 [none]
+[debug] [2024-09-22T09:55:53.103Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/recepies-dce96/rulesets/75c8c4f6-a044-4441-88cd-d1ce7afe3f76 200
+[debug] [2024-09-22T09:55:53.103Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/recepies-dce96/rulesets/75c8c4f6-a044-4441-88cd-d1ce7afe3f76 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-09-22T09:55:55.438Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/recepies-dce96/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-09-22T09:55:55.441Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/recepies-dce96/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-09-22T09:55:55.756Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/recepies-dce96/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-09-22T09:55:55.757Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/recepies-dce96/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2024-09-22T09:55:55.892Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/recepies-dce96/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-09-22T09:55:55.892Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/recepies-dce96/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/recepies-dce96/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2024-09-22T09:55:55.895Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-22T09:55:55.895Z] > authorizing via signed-in user (nuno.80.al@gmail.com)
+[debug] [2024-09-22T09:55:55.895Z] [iam] checking project recepies-dce96 for permissions ["firebase.projects.get"]
+[debug] [2024-09-22T09:55:55.896Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/recepies-dce96:testIamPermissions [none]
+[debug] [2024-09-22T09:55:55.896Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/recepies-dce96:testIamPermissions x-goog-quota-user=projects/recepies-dce96
+[debug] [2024-09-22T09:55:55.896Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/recepies-dce96:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-09-22T09:55:56.675Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/recepies-dce96:testIamPermissions 200
+[debug] [2024-09-22T09:55:56.676Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/recepies-dce96:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-09-22T09:55:56.677Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-09-22T09:55:56.677Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/recepies-dce96
+[debug] [2024-09-22T09:55:56.684Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-09-22T09:55:56.684Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/recepies-dce96
+[debug] [2024-09-22T09:55:57.662Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/runtimeconfig.googleapis.com 200
+[debug] [2024-09-22T09:55:57.663Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-09-22T09:55:57.710Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/cloudfunctions.googleapis.com 200
+[debug] [2024-09-22T09:55:57.711Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-09-22T09:55:57.711Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2024-09-22T09:55:57.711Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/recepies-dce96
+[debug] [2024-09-22T09:55:58.327Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2024-09-22T09:55:58.328Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2024-09-22T09:56:08.340Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-09-22T09:56:08.340Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/recepies-dce96
+[debug] [2024-09-22T09:56:09.294Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/cloudfunctions.googleapis.com 200
+[debug] [2024-09-22T09:56:09.295Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/recepies-dce96/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/tsconfig.json 
+[info] +  Wrote functions/tsconfig.dev.json 
+[info] +  Wrote functions/src/index.ts 
+[info] +  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2024-09-22T09:58:00.586Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/recepies-dce96 [none]
+[debug] [2024-09-22T09:58:00.931Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/recepies-dce96 200
+[debug] [2024-09-22T09:58:00.932Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/recepies-dce96 {"projectId":"recepies-dce96","projectNumber":"745725218335","displayName":"recepies","name":"projects/recepies-dce96","resources":{"hostingSite":"recepies-dce96","realtimeDatabaseInstance":"recepies-dce96-default-rtdb"},"state":"ACTIVE","etag":"1_5ca49c34-5c5c-4367-b004-d4fb773ee5a7"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-09-22T09:58:28.936Z] Error: ENOTDIR: not a directory, scandir 'C:\Users\nuno8\Desktop\programmazione\shadcn\recepies\y'
+    at Object.readdirSync (node:fs:1507:26)
+    at Object.createFileSync (C:\Users\nuno8\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:55:10)
+    at Config.writeProjectFile (C:\Users\nuno8\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:159:12)
+    at C:\Users\nuno8\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:183:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async doSetup (C:\Users\nuno8\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\index.js:173:13)
+    at async init (C:\Users\nuno8\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:40:9)
+[error] 
+[error] Error: An unexpected error has occurred.
