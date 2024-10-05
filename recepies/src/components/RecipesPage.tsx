@@ -38,7 +38,7 @@ export default function RecipesPage() {
           id: doc.id,
           ...doc.data()
         })) as Recipe[]
-        setRecipes(recipesList)
+        setRecipes(recipesList)z
       } catch (error) {
         console.error("Error fetching recipes:", error)
       } finally {
