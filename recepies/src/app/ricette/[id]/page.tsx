@@ -21,6 +21,13 @@ interface Ricetta {
   Costo: string
   Cottura: string
   Dosi_per: number
+  Ingredienti: string
+  Ingredienti_JSON: string | null
+  Istruzioni: string
+  Preparazione: string
+  Calorie_calcolate: number
+  Tipologia_piatti: string
+  URL: string
 }
 
 export default function RicettaPage() {
@@ -66,7 +73,7 @@ export default function RicettaPage() {
       {/* Dettagli della ricetta */}
       <Card className="shadow-lg p-6 rounded-lg">
         <CardHeader className="flex flex-col items-center mb-6">
-          <Avatar className="w-32 h-32 mb-4">
+          <Avatar className="w-36 h-36 mb-4">
             <AvatarImage src={ricetta?.Immagine_URL} alt={ricetta?.Titolo} />
             <AvatarFallback>{ricetta?.Titolo.slice(0, 2) || 'RC'}</AvatarFallback>
           </Avatar>
@@ -78,9 +85,14 @@ export default function RicettaPage() {
             <span className="font-semibold">Tempo di preparazione:</span> {ricetta?.Tempo_preparazione_totale} minuti
           </p>
           <p className="mb-4">
+            <span className="font-semibold">Cottura:</span> {ricetta?.Cottura}
+          </p>
+          <p className="mb-4">
+            <span className="font-semibold">Preparazione:</span> {ricetta?.Preparazione}
+          </p>
+          <p className="mb-4">
             <span className="font-semibold">Difficoltà:</span> {ricetta?.Difficolta}
           </p>
-
           <p className="mb-4">
             <span className="font-semibold">Calorie per porzione:</span> {ricetta?.Calorie_per_porzione} kcal
           </p>
@@ -91,20 +103,33 @@ export default function RicettaPage() {
             <span className="font-semibold">Porzioni:</span> Per {ricetta?.Dosi_per} persone
           </p>
           <p className="mb-4">
-            <span className="font-semibold">Cottura:</span> {ricetta?.Cottura}
+            <span className="font-semibold">Ingredienti:</span> {ricetta?.Ingredienti}
+          </p>
+          <p className="mb-4">
+            <span className="font-semibold">Tipologia dieta:</span> {ricetta?.Tipologia_dieta}
+          </p>
+          <p className="mb-4">
+            <span className="font-semibold">Tipologia piatti:</span> {ricetta?.Tipologia_piatti}
+          </p>
+          <p className="mb-4">
+            <span className="font-semibold">Calorie calcolate:</span> {ricetta?.Calorie_calcolate} kcal
           </p>
           <p className="mb-4">
             <span className="font-semibold">Presentazione:</span> {ricetta?.Presentazione}
           </p>
+          <p className="mb-4">
+            <span className="font-semibold">Istruzioni:</span> {ricetta?.Istruzioni}
+          </p>
+
         </CardContent>
 
         <CardFooter className="text-center">
-                
-          <div className="mb-8">
-            <Link href="/ricette">
-              <Button variant="outline">Torna alla lista delle ricette</Button>
-            </Link>
-          </div>
+            {/* Bottone per tornare alla lista delle ricette */}
+            <div className="mb-8">
+              <Link href="/ricette">
+                <Button variant="outline">Torna alla lista delle ricette</Button>
+              </Link>
+            </div>
 
         </CardFooter>
       </Card>

@@ -1,32 +1,36 @@
-'use client'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Hero from "@/components/Hero";
+import Benefits from "@/components/Benefits";
+import Testimonials from "@/components/Testimonials";
+import HowItWorks from "@/components/HowItWorks";
+import Navbar from "@/components/NavigationComponent";
 
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from '../config/firebaseConfig'
-import RecipesPage from '../components/RecipesPage'
 
-export default function Home() {
-  const router = useRouter()
-  const [loading, setLoading] = useState(true)
-  const [user, setUser] = useState(null)
+const Home: NextPage = () => {
+  return (
+    <>
+      <Head>
+        <title>Your Landing Page Title</title>
+        <meta name="description" content="Your landing page description" />
+        <meta property="og:title" content="Your Landing Page Title" />
+        <meta
+          property="og:description"
+          content="Your landing page description"
+        />
+        <meta property="og:image" content="/path/to/your/image.jpg" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user)
-      } else {
-        router.push('/login')
-      }
-      setLoading(false)
-    })
+      <main>
+        <Navbar />
+        <Hero />
+        <Benefits />
+        <Testimonials />
+        <HowItWorks />
+      </main>
+    </>
+  );
+};
 
-    return () => unsubscribe()
-  }, [router])
-
-  if (loading) {
-    return <div>Loading...</div>
-  }
-
-  return user ? <RecipesPage /> : null
-}
+export default Home;
