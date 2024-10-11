@@ -8,7 +8,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
-import CalorieCalculator from '@/components/CalorieCalculator';
+import NutritionalCalculator from '@/components/NutritionalCalculator'; // Importa il componente
 
 interface Ricetta {
   Titolo: string;
@@ -32,7 +32,7 @@ interface Ricetta {
 }
 
 export default function RicettaPage() {
-  const { id } = useParams();
+  const { id } = useParams(); // Ottieni l'id dalla route dinamica
   const [ricetta, setRicetta] = useState<Ricetta | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -120,22 +120,16 @@ export default function RicettaPage() {
           <p className="mb-4">
             <span className="font-semibold">Istruzioni:</span> {ricetta?.Istruzioni}
           </p>
-          <p className="mb-4">
-            <span className="font-semibold">ID:</span> {ricetta?.ID}
-          </p>
-          <p className="mb-4">
-            <span className="font-semibold">Ingredienti_JSON:</span> {ricetta?.Ingredienti_JSON}
-          </p>
 
           {/* Nutritional Calculator */}
-          {ricetta?.Ingredienti_JSON && ricetta.Dosi_per && (
-            <div className="mt-8">
-              <CalorieCalculator 
-                Ingredienti_JSON={ricetta.Ingredienti_JSON}
-                Dosi_per={ricetta.Dosi_per}
-              />
-            </div>
-          )}
+            {ricetta?.Ingredienti_JSON && typeof ricetta.Ingredienti_JSON === 'string' && (
+              <div className="mt-8">
+                <NutritionalCalculator recipe={{
+                  ...ricetta, // Passa tutte le altre proprietà di `ricetta`
+                  Ingredienti_JSON: ricetta.Ingredienti_JSON // Cast come stringa
+                }} />
+              </div>
+            )}
 
         </CardContent>
 
