@@ -3,6 +3,7 @@ import { db } from '@/config/firebaseConfig';
 import { collection, getDocs } from 'firebase/firestore';
 import fuzzysort from 'fuzzysort';
 
+// Definizione delle interfacce
 interface Ingredient {
   name: string;
   quantity: number;
@@ -27,8 +28,10 @@ interface Alimento {
 interface CalorieCalculatorProps {
   Ingredienti_JSON: string;
   Dosi_per: number;
+  onIngredientMatch: (matches: {ingredient: string, alimento: string | null}[]) => void;
 }
 
+// Funzioni di utilità
 const normalizeString = (str: string): string => {
   return str.toLowerCase().trim().replace(/\s+/g, ' ');
 };
@@ -82,10 +85,11 @@ const parseEggs = (ingredient: string, quantity: unknown): { name: string; quant
   return null;
 };
 
-const CalorieCalculator = ({
+const CalorieCalculator: React.FC<CalorieCalculatorProps> = ({
   Ingredienti_JSON,
-  Dosi_per
-}: CalorieCalculatorProps): JSX.Element => {
+  Dosi_per,
+  onIngredientMatch
+}) => {
   const [ingredients, setIngredients] = useState<Ingredient[]>([]);
   const [totalNutrition, setTotalNutrition] = useState({
     calories: 0,
@@ -108,6 +112,7 @@ const CalorieCalculator = ({
             const eggParsed = parseEggs(name, quantity);
             if (eggParsed) {
               const matchedAlimento = await findBestMatch(eggParsed.name, alimentiData);
+              onIngredientMatch([{ ingredient: name, alimento: matchedAlimento ? matchedAlimento.Nome : null }]);
               return {
                 name: eggParsed.name,
                 quantity: eggParsed.quantity,
@@ -124,6 +129,8 @@ const CalorieCalculator = ({
             const normalizedName = normalizeString(name);
             const matchedAlimento = await findBestMatch(normalizedName, alimentiData);
             
+            onIngredientMatch([{ ingredient: name, alimento: matchedAlimento ? matchedAlimento.Nome : null }]);
+
             return {
               name,
               quantity: typeof quantity === 'number' ? quantity : parseFloat(quantity) || 0,
@@ -151,7 +158,7 @@ const CalorieCalculator = ({
     };
 
     fetchAlimentiData();
-  }, [Ingredienti_JSON]);
+  }, [Ingredienti_JSON, onIngredientMatch]);
 
   useEffect(() => {
     const calculatedNutrition = ingredients.reduce((acc, ingredient) => {
